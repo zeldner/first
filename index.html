@@ -11,7 +11,7 @@
       }
       </style>
   </head>
-  <body>
+  <>
     <table id="myTable">
       <tr>
         <td>cell 1</td>
@@ -23,11 +23,48 @@
       </tr>
     </table>
     <body>
+      <input
+        type="button"
+        value="Set paragraph background color"
+        onclick="setBackground()" />
       <p>first</p>
       <p>second</p>
     </body>
     <p>Click the button to remove the first row.</p>
-  </body>
+    <button onclick="myFunction()">btn</button>
+    <button onclick="myFunction3()">btn3</button>
+    <button onclick="myFunction2()">btn2</button>
+    <input type="button" value="Generate a table" onclick="generateTable()" />
+    <script src="/script.js"></script>
+   <!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
+   <script>
+    // custom config for the MTW app 
+    const mtwAppConfig = {
+        border: true // app border in the MTW page                    
+    }
+
+    ///////////////////////////////////////////////////////
+    // implement this functions in order to use private API        
+    const sendPrivateApiRequest = async () => {
+        // your code here:
+        // sendRequestToParent({ cat: 'getAssets' })
+    }        
+
+    const acceptPrivateApiResponse = async (data) => {
+        // process received data here:
+        // console.log(data)
+    }
+
+    // use this in order to send on document load
+    document.addEventListener('DOMContentLoaded', () => {
+        // your code here:
+        //sendRequestToParent({ method: 'getAssets' })
+    })
+
+</script>
+<script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+
 </html>
 
 
